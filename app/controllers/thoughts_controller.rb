@@ -26,6 +26,27 @@ class ThoughtsController < ApplicationController
     @thought = Thought.find(params[:id])
   end
   
+  def edit
+    @thought = Thought.find(params[:id])
+  end
+  
+  def destroy
+    @thought = Thought.find(params[:id])
+    @thought.destroy
+    flash[:noticed] = "Thought was successfully deleted."
+    redirect_to thoughts_path
+  end
+
+  def update
+    @thought = Thought.find(params[:id])
+    if @thought.update(thought_params)
+      flash[:notice] = "Thought was successfully updated."
+      redirect_to thought_path(@thought)
+    else 
+      render 'edit'
+    end
+  end
+  
   private 
   def thought_params
     # this allows us to use the title and description fields that are in params
