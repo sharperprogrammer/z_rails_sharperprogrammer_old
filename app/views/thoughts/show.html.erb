@@ -1,0 +1,10 @@
+<h1>Showing selected thought</h1>
+<p>
+  Title: <%= @thought.title %>
+</p>
+<p>
+  Description: <%= @thought.description %>
+</p>
+
+<%= link_to "Edit this thought", edit_thought_path(@thought) %> |
+<%= link_to "Back to thoughts listing", thoughts_path %>

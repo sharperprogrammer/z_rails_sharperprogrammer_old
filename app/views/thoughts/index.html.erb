@@ -1,0 +1,36 @@
+<style>
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+
+  }
+  .main-header {
+    text-align: center;
+  }
+</style>
+
+<div class="center">
+<h1 class="main-header">Listing all thoughts</h1>
+<p>
+  
+<%= link_to "Create new thought", new_thought_path %>
+</p>
+<table>
+  <tr>
+  <th>Title</th>
+  <th>Description</th>
+  </tr>
+  
+  <% @thoughts.each do |thought| %>
+  <tr>
+    <td><%= thought.title %></td>
+    <td style="width:70%"><%= thought.description %></td>
+    <td><%= link_to 'Edit', edit_thought_path(thought) %></td>
+    <td><%= link_to 'Show', thought_path(thought) %></td>
+  </tr>
+  <% end %>
+  
+</table>
+</div>
