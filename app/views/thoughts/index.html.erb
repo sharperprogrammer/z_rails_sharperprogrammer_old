@@ -12,26 +12,26 @@
 </style>
 
 <div class="center">
-<h1 class="main-header">Listing all thoughts</h1>
-<p>
+  <h1 class="main-header">Listing all thoughts</h1>
+  <p>
   
-<%= link_to "Create new thought", new_thought_path %>
-</p>
-<table>
-  <tr>
-  <th>Title</th>
-  <th>Description</th>
-  </tr>
+  <%= link_to "Create new thought", new_thought_path %>
+  </p>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
   
-  <% @thoughts.each do |thought| %>
-  <tr>
-    <td style="width:20%"><%= thought.title %></td>
-    <td style="width:60%"><%= thought.description %></td>
-    <td> <%= link_to 'Edit', edit_thought_path(thought) %> </td>
-    <td> <%= link_to 'Show', thought_path(thought) %> </td>
-    <td> <%= link_to 'Delete', thought_path(thought), method: :delete, data: {confirm: "Are you sure?"} %> </td>
-  </tr>
-  <% end %>
+    <% @thoughts.each do |thought| %>
+    <tr>
+      <td style="width:20%"><%= thought.title %></td>
+      <td style="width:60%"><%= thought.description %></td>
+      <td> <%= link_to 'Edit', edit_thought_path(thought) %> </td>
+      <td> <%= link_to 'Show', thought_path(thought) %> </td>
+      <td> <%= link_to 'Delete', thought_path(thought), method: :delete, data: {confirm: "Are you sure?"} %> </td>
+    </tr>
+    <% end %>
   
-</table>
+  </table>
 </div>

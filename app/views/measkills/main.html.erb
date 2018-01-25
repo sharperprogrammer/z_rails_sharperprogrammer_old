@@ -1,0 +1,35 @@
+<div align="center">
+  
+<%= link_to "Refresh with params", meabuilder_path(:myaction => "shields") %>
+  
+  <table>
+    <tr>
+      <th>Combat</th>
+      <th>Biotics</th>
+      <th>Tech</th>
+    </tr>
+    <% @measkills.each do |measkill| %>
+      <% if measkill.category == "Combat" %>
+      <tr>
+        <td>
+          <% if @selectedskills.include?(measkill) %>
+          <strong>
+          <% end %>
+            <%= measkill.name %>
+          <% if @selectedskills.include?(measkill) %>
+          </strong>
+          <% end %>
+        </td>
+      <% elsif measkill.category == "Biotics" %>
+        <td>
+          <%= measkill.name %>
+        </td>
+      <% else %>
+        <td>
+          <%= measkill.name %>
+        </td>
+      </tr>
+      <% end %>
+    <% end %>
+  </table>
+</div>
