@@ -2,15 +2,19 @@ class MeaskillsController < ApplicationController
   
   def main
     @measkills = Measkill.all
-    if params[:myaction] == "shields"
+
+    if params[:skillfilter] == "increase-melee-atk"
       @selectedskills = Array.new
-      @selectedskills.push(@measkills.find(13))
-      @selectedskills.push(@measkills.find(16))
+      @measkills.each do |measkill|
+        if measkill.meleeatkup == true
+          @selectedskills.push(measkill)
+        end
+      end
       
     else
       @selectedskills = Array.new
-      @selectedskills.push(@measkills.find(7))
-      @selectedskills.push(@measkills.find(10))
+#      @selectedskills.push(@measkills.find(7))
+#      @selectedskills.push(@measkills.find(10))
     end
   end
   

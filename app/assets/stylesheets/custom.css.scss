@@ -22,6 +22,14 @@
   text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;
 }
 
+.meaimage {
+  background-image: asset-url('mea_siblings');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 444px;
+}
+
 .white-text {
   color: white;
 }

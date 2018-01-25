@@ -1,6 +1,9 @@
 <div align="center">
+
+  <div class="meaimage">
+  </div>
   
-<%= link_to "Refresh with params", meabuilder_path(:myaction => "shields") %>
+<%= link_to "Skills that boost Melee Dmg", meabuilder_path(:skillfilter => "increase-melee-atk") %>
   
   <table>
     <tr>
@@ -22,11 +25,23 @@
         </td>
       <% elsif measkill.category == "Biotics" %>
         <td>
-          <%= measkill.name %>
+          <% if @selectedskills.include?(measkill) %>
+          <strong>
+          <% end %>
+            <%= measkill.name %>
+          <% if @selectedskills.include?(measkill) %>
+          </strong>
+          <% end %>
         </td>
       <% else %>
         <td>
-          <%= measkill.name %>
+          <% if @selectedskills.include?(measkill) %>
+          <strong>
+          <% end %>
+            <%= measkill.name %>
+          <% if @selectedskills.include?(measkill) %>
+          </strong>
+          <% end %>
         </td>
       </tr>
       <% end %>
