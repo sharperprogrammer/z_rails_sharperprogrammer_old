@@ -13,7 +13,7 @@ class ThoughtsController < ApplicationController
     
     @thought = Thought.new(thought_params)
     if @thought.save
-      flash[:notice] = "Thought was successfully created"
+      flash[:success] = "Thought was successfully created"
       # this will go through the route (which you can see from the console with 
       # ‘rake routes’) with prefix: ‘thought’.  
       redirect_to thought_path(@thought)
@@ -33,14 +33,14 @@ class ThoughtsController < ApplicationController
   def destroy
     @thought = Thought.find(params[:id])
     @thought.destroy
-    flash[:noticed] = "Thought was successfully deleted."
+    flash[:danger] = "Thought was successfully deleted."
     redirect_to thoughts_path
   end
 
   def update
     @thought = Thought.find(params[:id])
     if @thought.update(thought_params)
-      flash[:notice] = "Thought was successfully updated."
+      flash[:success] = "Thought was successfully updated."
       redirect_to thought_path(@thought)
     else 
       render 'edit'
