@@ -11,10 +11,16 @@
 
 }
 
-.jumbotron {
+.jumbotron-home {
   background-image: asset-url('placeholder_index');
   background-size: cover;
   height: 550px;
+}
+
+.about {
+  max-width: 700px;
+  margin:0 auto;
+  text-align: left;
 }
 
 .jumbotron h1 {
