@@ -3,7 +3,11 @@
   <div class="meaimage">
   </div>
   
-<%= link_to "Skills that boost Melee Dmg", meabuilder_path(:skillfilter => "increase-melee-atk") %>
+<div class="measkills-links">
+  <%= link_to "Skills that boost Melee Dmg", meabuilder_path(:skillfilter => "increase-melee-atk") %> |
+  <%= link_to "Boost Shield Damage", meabuilder_path(:skillfilter => "boost-shield-dmg") %> |
+  <%= link_to "Boost Armor Damage", meabuilder_path(:skillfilter => "boost-armor-dmg") %>
+</div>
   
   <table>
     <tr>

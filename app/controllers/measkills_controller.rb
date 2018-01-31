@@ -10,7 +10,20 @@ class MeaskillsController < ApplicationController
           @selectedskills.push(measkill)
         end
       end
-      
+    elsif params[:skillfilter] == "boost-shield-dmg"
+      @selectedskills = Array.new
+      @measkills.each do |measkill|
+        if measkill.boostshielddmg == true
+          @selectedskills.push(measkill)
+        end
+      end
+    elsif params[:skillfilter] == "boost-armor-dmg"
+      @selectedskills = Array.new
+      @measkills.each do |measkill|
+        if measkill.boostarmordmg == true
+          @selectedskills.push(measkill)
+        end
+      end
     else
       @selectedskills = Array.new
 #      @selectedskills.push(@measkills.find(7))

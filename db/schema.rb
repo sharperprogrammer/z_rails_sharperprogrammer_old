@@ -11,12 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125023036) do
+ActiveRecord::Schema.define(version: 20180130200621) do
 
   create_table "measkills", force: :cascade do |t|
     t.string  "category"
     t.string  "name"
     t.boolean "meleeatkup"
+    t.boolean "boostshielddmg"
+    t.boolean "boostarmordmg"
   end
 
   create_table "thoughts", force: :cascade do |t|
