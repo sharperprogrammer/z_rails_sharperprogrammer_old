@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   get 'about', to: 'welcome#about'
   get 'meabuilder', to: 'measkills#main'
+  get 'meabuilder2', to: 'welcome#measkills'
   
   resources :thoughts
 
