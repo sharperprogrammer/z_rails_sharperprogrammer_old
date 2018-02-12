@@ -11,10 +11,6 @@
 
 }
 
-.currently-learning ul li {
-  font-size: 1.3em;
-}
-
 .jumbotron-home {
   background-image: asset-url('placeholder_index');
   background-size: cover;
@@ -22,14 +18,23 @@
 }
 
 .about {
+  background-color: none;
   max-width: 700px;
   margin:0 auto;
   text-align: left;
 }
 
+.about p {
+  font-size:1.4em;
+}
+
+.about ul li {
+  font-size: 1.3em;
+}
+
 .jumbotron h1 {
   color: white;
-  text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .meaimage {
@@ -41,7 +46,9 @@
 }
 
 .white-text {
-  color: white;
+  /* this gets overwritten by something in jumbotron class  */
+  /*text-decoration: underline;
+  color: white;*/
 }
 
 .center-me {
