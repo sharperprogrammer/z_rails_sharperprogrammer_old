@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   root 'welcome#home'
   
   get 'about', to: 'welcome#about'
+  get 'contact', to: 'contacts#new'
+  get 'contacts', to: 'contacts#catch_contacts'
   get 'meabuilder', to: 'measkills#main'
   get 'meabuilder2', to: 'welcome#measkills'
   
   resources :thoughts
+  resources :contacts, only: [:new, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

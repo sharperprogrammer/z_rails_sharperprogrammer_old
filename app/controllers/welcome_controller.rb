@@ -13,5 +13,5 @@ class WelcomeController < ApplicationController
   def measkills
     redirect_to "http://www.sharperprogrammer.com/meabuilder2"
   end
-  
+    
 end

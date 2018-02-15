@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # my gems
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'mail_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
