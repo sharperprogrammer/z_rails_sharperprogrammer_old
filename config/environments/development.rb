@@ -1,8 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -22,8 +19,8 @@ Rails.application.configure do
   #change mail delivery to smtp for Gmail addresses.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: "465",
+    address: "aspmx.l.google.com",
+    port: 25,
     domain: "sharperprogrammer.com",
     authentication: "login",
     enable_starttls_auto: true,
