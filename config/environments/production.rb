@@ -16,8 +16,8 @@ Rails.application.configure do
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "aspmx.l.google.com",
-    port: "25",
+    address: "smtp.google.com",
+    port: 465,
     domain: "sharperprogrammer.com",
     authentication: "login",
     enable_starttls_auto: true,
@@ -54,7 +54,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
