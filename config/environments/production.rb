@@ -16,8 +16,8 @@ Rails.application.configure do
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.google.com",
-    port: 465,
+    address: "aspmx.l.google.com",
+    port: 25,
     domain: "sharperprogrammer.com",
     authentication: "login",
     enable_starttls_auto: true,
