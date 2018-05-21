@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # my gems
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'mail_form'
+gem 'nokogiri', '>= 1.8.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
