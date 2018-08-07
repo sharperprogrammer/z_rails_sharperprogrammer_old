@@ -6,6 +6,7 @@ gem 'mail_form'
 gem 'nokogiri', '>= 1.8.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# ruby version 2.3.4
 gem 'rails', '4.2.7.1'
 
 # Use sqlite3 as the database for Active Record
