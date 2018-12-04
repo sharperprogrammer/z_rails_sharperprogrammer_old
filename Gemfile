@@ -5,6 +5,8 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'mail_form'
 gem 'nokogiri', '>= 1.8.2'
 
+gem 'sprockets', '>= 3.7.2'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # ruby version 2.3.4
 gem 'rails', '4.2.7.1'
