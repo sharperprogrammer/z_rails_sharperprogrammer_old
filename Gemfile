@@ -5,7 +5,10 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'mail_form'
 gem 'nokogiri', '>= 1.8.2'
 
+# these gems address security concerns flagged by GitHub
 gem 'sprockets', '>= 3.7.2'
+gem 'ffi', '>= 1.9.24'
+gem 'loofah', '>= 2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # ruby version 2.3.4
