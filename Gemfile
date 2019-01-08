@@ -11,8 +11,8 @@ gem 'ffi', '>= 1.9.24'
 gem 'loofah', '>= 2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# ruby version 2.3.4
-gem 'rails', '4.2.7.1'
+ruby '2.6.0'
+gem 'rails', '4.2.8'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
