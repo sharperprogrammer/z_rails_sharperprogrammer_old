@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get 'meabuilder2', to: 'welcome#measkills'
   get 'tech_theme', to: 'welcome#tech_theme'
 
-  resources :thoughts
   resources :contacts, only: [:new, :create]
 
   # Example of regular route:
